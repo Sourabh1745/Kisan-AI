@@ -25,7 +25,7 @@ export default function SignupPage() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/signup",
+        `${import.meta.env.VITE_API_URL}/api/signup`,
         formData
       );
       const { token, user, message } = response.data;

@@ -20,7 +20,7 @@ export default function LoginPage() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/login",
+       `${import.meta.env.VITE_API_URL}/api/login`,
         formData
       );
       const { token, user, message } = response.data;
